@@ -186,17 +186,25 @@ header nav a {
 }
 .main-content {
   width: 75%;
-  border: 2px solid gray;
   display: flex;
   flex-direction: column;
   height: 100%;
   line-height: 1.5;
-  margin-right: 20px;
+  margin-right: 50px;
   padding-left: 20px;
+}
+.main-content .firstjob {
+  border-top: 2px solid grey;
+  padding-top: 15px;
+  border-bottom: 2px solid grey;
+  padding-bottom: 15px;
 }
 .main-content h1 {
   font-size: 3rem;
   color: lightskyblue;
+}
+.secondjob {
+  padding-top: 20px;
 }
 .secondjob h2 {
   font-size: 1.9rem;
