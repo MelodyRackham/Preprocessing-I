@@ -136,40 +136,42 @@ html body {
   height: 100vh;
   font-size: 1.6rem;
 }
-.sidebar {
+h1 {
+  font-size: 6.5rem;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+h2 {
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+h3 {
+  font-size: 2rem;
+  color: #3399ff;
+  padding-bottom: 30px;
+  text-align: left;
+  padding-top: 20px;
+}
+h4 {
+  font-size: 2rem;
+  font-family: 'Manjari', sans-serif;
+  text-align: right;
+  color: #3399ff;
+  background-color: lightgray;
+  padding-right: 10px;
+}
+h5 {
+  font-weight: bold;
+  font-size: 1.9rem;
+  font-family: 'Manjari', sans-serif;
+}
+h6 {
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.wrapsboth {
   display: flex;
-  flex-direction: column;
-  width: 25%;
-  height: 100%;
-  margin-left: 20px;
-  padding-right: 20px;
-  border-right: 3px dotted black;
-  line-height: 2.2;
-}
-.sidebar .contact {
-  padding-top: 15px;
-  border-top: 1px solid black;
-  text-align: right;
-}
-.sidebar .education {
-  padding-top: 15px;
-  border-top: 1px solid black;
-  text-align: right;
-}
-.sidebar .education h1 {
-  font-size: 2rem;
-  color: lightskyblue;
-  background-color: lightgrey;
-}
-.sidebar .skills {
-  padding-top: 15px;
-  border-top: 1px solid black;
-  text-align: right;
-}
-.sidebar .skills h1 {
-  font-size: 2rem;
-  color: lightskyblue;
-  background-color: lightgrey;
 }
 header {
   display: flex;
@@ -183,21 +185,33 @@ header nav {
   width: 100%;
   text-align: right;
 }
+@media (max-width: 500px) {
+  header nav {
+    text-align: center;
+  }
+}
 header nav a {
-  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'Manjari', sans-serif;
+  color: #3399ff;
 }
-footer {
-  height: 6%;
-  width: 100%;
-  background-color: lightblue;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+  margin-left: 20px;
+  padding-right: 20px;
+  border-right: 3px dotted black;
+  line-height: 2.2;
 }
-.heading {
-  font-family: 'Dancing Script', cursive;
-  font-size: 5rem;
-  text-align: center;
-}
-.heading h2 {
-  font-size: 2rem;
+.sidebar .contact,
+.sidebar .education,
+.sidebar .skills {
+  padding-top: 15px;
+  border-top: 1px solid black;
+  text-align: right;
 }
 .main-content {
   width: 75%;
@@ -208,27 +222,14 @@ footer {
   margin-right: 50px;
   padding-left: 20px;
 }
-.main-content .firstjob {
+.main-content .aboutme {
   border-top: 2px solid grey;
   padding-top: 15px;
   border-bottom: 2px solid grey;
   padding-bottom: 15px;
 }
-.main-content h1 {
-  font-size: 3rem;
-  color: lightskyblue;
-}
-h3 {
-  font-size: 1.7rem;
-  color: black;
-  padding-bottom: 30px;
-}
-.secondjob {
+.main-content .aboutme .secondjob {
   padding-top: 30px;
-}
-.secondjob h2 {
-  font-size: 2.1rem;
-  color: black;
 }
 .listone {
   list-style-type: disc;
@@ -236,6 +237,8 @@ h3 {
   padding-top: 40px;
   padding-bottom: 20px;
 }
-.wrapsboth {
-  display: flex;
+footer {
+  height: 6%;
+  width: 100%;
+  background-color: #3399ff;
 }
