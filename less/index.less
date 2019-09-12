@@ -221,16 +221,19 @@ header {
   padding-right: 20px;
   border-right: 3px dotted black;
   line-height: 2.2;
-  @media (max-width: 500px) {
-	text-align: center;
-	background: yellow;
+
   .contact,
   .education,
   .skills {
     padding-top: 15px;
     border-top: 1px solid black;
-	text-align: right;
-  } //this closes the contact education and skills
+    text-align: right;
+
+    @media (max-width: 500px) {
+      text-align: center;
+      background: purple;
+    } //this closes the contact education and skills
+  } //this closes the sidebar media query
 } //this closes the sidebar
 .main-content {
   height: 100%;
@@ -257,8 +260,8 @@ header {
   padding-top: 40px;
   padding-bottom: 20px;
 } //this closes listone
-footer{
+footer {
   height: 6%;
   width: 100%;
-  background-color: @main-color; 
-} //this closes footer
+  background-color: @main-color;
+} //this closes the footer
