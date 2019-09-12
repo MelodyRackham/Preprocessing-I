@@ -141,10 +141,20 @@ h1 {
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 h2 {
   font-size: 3rem;
   font-family: 'Dancing Script', cursive;
   text-align: center;
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 h3 {
   font-size: 2rem;
@@ -188,6 +198,10 @@ header nav {
 @media (max-width: 500px) {
   header nav {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
   }
 }
 header nav a {
@@ -212,6 +226,13 @@ header nav a {
   padding-top: 15px;
   border-top: 1px solid black;
   text-align: right;
+}
+@media (max-width: 500px) {
+  .sidebar .contact,
+  .sidebar .education,
+  .sidebar .skills {
+    font-size: 0.5rem;
+  }
 }
 .main-content {
   width: 75%;
