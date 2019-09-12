@@ -4,56 +4,276 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-body {
-	line-height: 1;
+
+ol,
+ul {
+  list-style: none;
 }
-ol, ul {
-	list-style: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+
+  body {
+    line-height: 2;
+    font-family: @body-font;
+    height: 100vh;
+    font-size: 1.6rem;
+  }
+} //  this closes the html
+
+//	****** VARIABLES ****** //
+@main-color: #3399ff;
+@body-font: 'Manjari', sans-serif;
+@heading-font: 'Dancing Script', cursive;
+
+// ****** MIX-INS ******//
+.center() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-html, body {
-    height: 100%;
+//****** HEADERS ******//
+h1 {
+  font-size: 6.5rem;
+  font-family: @heading-font;
+  text-align: center;
+
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  } //this closes media query for h1
+} //this closes the h1
+h2 {
+  font-size: 3rem;
+  font-family: @heading-font;
+  text-align: center;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  } //this closes the media query for the h2
+} //this closes the h2
+h3 {
+  font-size: 2rem;
+  color: @main-color;
+  padding-bottom: 30px;
+  text-align: left;
+  padding-top: 20px;
+}
+h4 {
+  font-size: 2rem;
+  font-family: @body-font;
+  text-align: right;
+  color: @main-color;
+  background-color: lightgray;
+  padding-right: 10px;
+}
+h5 {
+  font-weight: bold;
+  font-size: 1.9rem;
+  font-family: @body-font;
+}
+h6 {
+  font-style: italic;
+  padding-bottom: 20px;
 }
 
+.wrapsboth {
+  display: flex;
+} //this closes the wrapsboth
+header {
+  .center();
+  width: 100%;
+  height: 30%;
+  nav {
+    background-color: lightgrey;
+    width: 100%;
+    text-align: right;
+
+    @media (max-width: 500px) {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 1rem;
+    } //this closes the media query for nav
+    a {
+      padding-left: 30px;
+      padding-right: 30px;
+      font-family: @body-font;
+      color: @main-color;
+    } // this closes the a tag
+  } //this closes the nav
+} // this closes the header
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+  margin-left: 20px;
+  padding-right: 20px;
+  border-right: 3px dotted black;
+  line-height: 2.2;
+
+  .contact,
+  .education,
+  .skills {
+    padding-top: 15px;
+    border-top: 1px solid black;
+    text-align: right;
+
+    @media (max-width: 500px) {
+      font-size: 0.5rem;
+    }
+  } //this closes the contact education and skills
+} //this closes the sidebar
+.main-content {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  line-height: 1.5;
+  margin-right: 50px;
+  padding-left: 20px;
+  .aboutme {
+    border-top: 2px solid grey;
+    padding-top: 15px;
+    border-bottom: 2px solid grey;
+    padding-bottom: 15px;
+    .secondjob {
+      padding-top: 30px;
+    } //this closes the secondjob
+  } //this closes the firstjob
+} //this closes the main-content
+.listone {
+  list-style-type: disc;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+} //this closes listone
+footer {
+  height: 6%;
+  width: 100%;
+  background-color: @main-color;
+} //this closes the footer
